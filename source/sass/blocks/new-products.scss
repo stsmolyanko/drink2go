@@ -1,0 +1,150 @@
+.new-products__slide-wrapper {
+  padding-top: 19px;
+  padding-bottom: 60px;
+
+  &--flat-white {
+    background-color: $flat-white;
+  }
+
+  &--lavender {
+    background-color: $lavender-latte;
+  }
+
+  &--espresso {
+    background-color: $espresso;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+  }
+}
+
+.new-products__slider-wrapper-inner {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    padding-top: 43px;
+    padding-bottom: 249px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 695px;
+    padding-top: 163px;
+    padding-bottom: 242px;
+  }
+}
+
+.new-products__slider-wrapper-outer--flat-white {
+  @media (max-width: $mobile-only) {
+    background-color: $flat-white;
+  }
+}
+
+.new-products__slider-wrapper-outer--lavender {
+  @media (max-width: $mobile-only) {
+    background-color: $lavender-latte;
+  }
+}
+
+.new-products__slider-wrapper-outer--espresso {
+  @media (max-width: $mobile-only) {
+    background-color: $espresso;
+  }
+}
+
+.new-products__product-img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: inline-block;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: -257px;
+
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 74px;
+    left: 65px;
+    transform: none;
+
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.new-products__title {
+  @include reset-indents;
+
+  margin-top: 5px;
+  margin-bottom: 13px;
+
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
+  color: $black;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 23px;
+    margin-bottom: 32px;
+
+    font-size: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.new-products .badge-title {
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.new-products__description {
+  margin-bottom: 19px;
+
+  line-height: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 590px;
+    margin: 0 auto 20px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include reset-indents;
+
+    margin-bottom: 40px;
+    text-align: left;
+  }
+}
+
+.new-products__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 230px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.new-products__old-price {
+  margin-right: 2px;
+
+  font-size: 16px;
+  color: $primary;
+}

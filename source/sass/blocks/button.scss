@@ -1,0 +1,40 @@
+.button {
+  display: inline-block;
+  padding: 11px 20px;
+
+  font-size: 16px;
+  font-weight: 400;
+  color: $white;
+
+  background-color: $primary;
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  &--checkout {
+    position: relative;
+
+    font-size: 14px;
+    padding: 10px 20px 10px 46px;
+  }
+
+  &--checkout::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background-image: url("img/icons/icon-checkout.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+}

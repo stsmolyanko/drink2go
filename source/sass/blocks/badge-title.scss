@@ -1,0 +1,9 @@
+.badge-title {
+  @include reset-indents;
+
+  color: $primary;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}

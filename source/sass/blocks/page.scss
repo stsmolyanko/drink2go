@@ -1,0 +1,15 @@
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 100%;
+}
+
+.page__body a {
+  text-decoration: none;
+}
+
+.page__body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,402 @@
+.filter-form {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    @include reset-indents;
+
+    max-width: 100%;
+    padding-right: 10px;
+  }
+}
+
+.filter-form__wrapper {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    @include reset-indents;
+
+    display: flex;
+    column-gap: 31px;
+    margin-bottom: 19px;
+  }
+}
+
+.filter-form__category {
+  @include reset-indents;
+
+  margin-bottom: 28px;
+
+  border: none;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 34px;
+  }
+}
+
+.filter-form__category-title {
+  margin-bottom: 33px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.filter-form__price-range-controls {
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    width: 222px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
+.filter-form__price-range-filter {
+  position: relative;
+
+  @media (max-width: $mobile-only) {
+    max-width: 280px;
+  }
+}
+
+.filter-form__price-range-bar-gray {
+  height: 2px;
+
+  background-color: $grey;
+}
+
+.filter-form__price-range-bar-violet {
+  position: relative;
+  top: -1px;
+
+  width: 85%;
+  height: 4px;
+
+  background-color: $primary;
+
+  &--disabled {
+    background-color: $grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 87%;
+  }
+}
+
+.filter-form__price-control-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 23px;
+  height: 23px;
+
+  border: 2px solid $primary;
+  border-radius: 50%;
+  background-color: $white;
+
+  cursor: pointer;
+
+  &--disabled {
+    border-color: $grey;
+  }
+}
+
+.filter-form__price-control-item-min {
+  top: -10px;
+}
+
+.filter-form__price-control-item-max {
+  top: -10px;
+  left: auto;
+  right: 20px;
+}
+
+.filter-form__price-control-item:hover,
+.filter-form__price-control-item:focus {
+  outline: 2px solid $white;
+  outline-offset: -4px;
+  background-color: $primary-25-no-transparency;
+}
+
+.filter-form__price-control-item:active {
+  outline: 2px solid $white;
+  background-color: $primary;
+}
+
+.filter-form__price-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 280px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+  }
+}
+
+.filter-form__price-divider {
+  font-size: 16px;
+}
+
+.filter-form__price-input {
+  width: 125px;
+  height: 40px;
+
+  text-align: center;
+  border: 2px solid $primary;
+  border-radius: 3px;
+
+  &:disabled {
+    border-color: $light-grey;
+    color: $grey;
+  }
+
+  &:focus {
+    border-color: $primary;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 96px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}
+
+.filter-form__price-input::placeholder {
+  color: $grey;
+}
+
+
+.filter-form__price-input::-webkit-outer-spin-button,
+.filter-form__price-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} // скрываем стрелки у полей в Chrome
+
+input[type="number"] {
+  -moz-appearance: textfield;
+} // скрываем стрелки у полей в Firefox
+
+
+.filter-form__category--milk {
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-right: 11px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 13px;
+  }
+}
+
+.filter-form__category-title--milk {
+  margin-bottom: 22px;
+}
+
+.filter-form__milk-list,
+.filter-form__countries-list {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.filter-form__milk-item {
+  margin-bottom: 20px;
+}
+
+.filter-form__milk-label {
+  position: relative;
+
+  padding-left: 34px;
+}
+
+.filter-form__milk-label::before {
+  position: absolute;
+  content: "";
+  top: -2px;
+  left: 0;
+
+  width: 23px;
+  height: 23px;
+
+  border: 2px solid $primary;
+  border-radius: 50%;
+  background-color: $white;
+}
+
+.filter-form__milk-input:checked + .filter-form__milk-label::after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: 4px;
+
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid $primary;
+  border-radius: 50%;
+  background-color: $primary;
+}
+
+.filter-form__milk-input:disabled + .filter-form__milk-label {
+  color: $light-grey;
+}
+
+.filter-form__milk-input:disabled + .filter-form__milk-label::before {
+  border-color: $light-grey;
+}
+
+.filter-form__milk-input:disabled:checked + .filter-form__milk-label::after {
+  border: none;
+  background-color: $light-grey;
+}
+
+.filter-form__milk-item:hover .filter-form__milk-input:not(:checked):not(:disabled):not(:checked:disabled) + .filter-form__milk-label::after {
+  position: absolute;
+  content: "";
+
+  top: 2px;
+  left: 4px;
+
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $primary-25;
+}
+
+
+.filter-form__milk-input:disabled:checked:hover + .filter-form__milk-label::after {
+  background-color: $light-grey;
+}
+
+.filter-form__category--country {
+  margin-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.filter-form__category-title--country {
+  margin-bottom: 23px;
+}
+
+.filter-form__country-item {
+  margin-bottom: 20px;
+
+  &:hover .filter-form__country-input:not(:checked):not(:disabled):not(:disabled:checked) + .filter-form__country-label::before {
+    background-color: $primary-25;
+    border: 2px solid $primary;
+  }
+}
+
+.filter-form__country-label {
+  position: relative;
+  padding-left: 52px;
+}
+
+.filter-form__country-label::before {
+  position: absolute;
+  content: "";
+
+  top: -3px;
+  left: 0;
+
+  width: 42px;
+  height: 24px;
+
+  border-radius: 15px;
+  background-color: $grey;
+  transition: all 0.1s ease-out;
+}
+
+.filter-form__country-label::after {
+  position: absolute;
+  content: "";
+  top: -1px;
+  left: 2px;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  background-color: $white;
+  transition: all 0.1s ease-out;
+}
+
+.filter-form__country-input:checked + .filter-form__country-label::before {
+  background-color: $primary;
+  transition: all 0.1s ease-out;
+}
+
+.filter-form__country-input:checked + .filter-form__country-label::after {
+  left: 20px;
+  transition: all 0.1s ease-out;
+}
+
+.filter-form__country-input:disabled + .filter-form__country-label {
+  color: $light-grey;
+}
+
+.filter-form__country-input:disabled + .filter-form__country-label::before {
+  background-color: $light-grey;
+}
+
+.filter-form__country-input:checked:disabled + .filter-form__country-label::after {
+  left: 20px;
+  background-color: $grey;
+}
+
+.filter-form__reset-button {
+  display: block;
+  height: 40px;
+  width: 100%;
+
+  color: $primary;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 4px;
+  background-color: $white;
+
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: $white;
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    color: $white;
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    position: relative;
+    left: 5px;
+
+    min-width: 220px;
+    width: auto;
+    margin: 0 auto;
+  }
+}

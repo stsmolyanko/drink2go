@@ -1,0 +1,65 @@
+.select {
+  width: auto;
+}
+
+.select__toggle {
+  @include reset-indents;
+
+  justify-content: right;
+  width: auto;
+  padding: 5px 7px 5px 16px;
+
+  color: $primary;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: normal;
+
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 5px;
+    font-size: 16px;
+  }
+}
+
+.select__toggle:hover {
+  background-color: $secondary;
+}
+
+.select__toggle::after {
+  width: 11px;
+  height: 6px;
+  margin-left: 10px;
+}
+
+.select__dropdown {
+  top: 36px;
+  left: -23px;
+
+  max-height: 11rem;
+  width: 190px;
+
+  font-size: 14px;
+
+  border: none;
+}
+
+.select__option {
+  @include reset-indents;
+
+  padding: 12.5px 20px;
+}
+
+.select__option:hover {
+  color: $black;
+
+  background-color: $secondary;
+}
+
+.select__option_selected,
+.select__option_selected:hover {
+  color: $white;
+
+  background-color: $primary;
+}

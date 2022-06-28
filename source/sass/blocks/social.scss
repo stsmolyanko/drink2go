@@ -1,0 +1,40 @@
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 4px;
+}
+
+.social__link:hover {
+  background-color: $secondary;
+}
+
+.social__link:active {
+  background-color: $primary-25;
+}
+
+.social__link:hover .social__img {
+  fill: $primary;
+}
+
+.social__img {
+  fill: $grey;
+}
+
+
+.footer .social {
+  margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
